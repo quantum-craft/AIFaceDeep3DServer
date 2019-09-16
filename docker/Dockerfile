@@ -13,6 +13,8 @@ RUN apt-get install -y git
 
 RUN apt-get install -y libsm6 libxext6 libxrender-dev
 
+RUN apt-get install -y net-tools
+
 RUN git clone --recursive https://github.com/quantum-craft/AIFaceDeep3DServer.git
 
 RUN pip install --upgrade pip

@@ -9,4 +9,5 @@ api.add_resource(MeshesDeep3DFaceGetMesh,
                  '/meshes-deep3d-face/reconstruct-mesh')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port='5000')
+
