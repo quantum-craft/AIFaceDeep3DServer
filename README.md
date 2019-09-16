@@ -45,7 +45,7 @@ pip install tensorflow-gpu
 
 ```bash
 pip install dlib --verbose
-pip intsll numpy
+pip install numpy
 pip install Pillow
 pip install scikit-image
 pip install scipy
