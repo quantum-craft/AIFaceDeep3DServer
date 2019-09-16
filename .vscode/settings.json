@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "C:\\Users\\Henry\\anaconda3\\envs\\deep3d_face\\python.exe",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "--error-only",
+        "pylint_flask"
+    ]
+}

@@ -1,0 +1,3 @@
+[submodule "algorithms/Deep3DFaceReconstruction"]
+	path = algorithms/Deep3DFaceReconstruction
+	url = https://github.com/quantum-craft/Deep3DFaceReconstruction.git
