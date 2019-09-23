@@ -70,7 +70,7 @@ class MeshesDeep3DFaceGetMesh(Resource):
 
                 if len(rects) == 0:
                     ret_json_obj.json['Message'] = 'Please upload a picture with one clear face.'
-                    return ret_json_obj.json, 200
+                    return ret_json_obj.json, 204, {'Info': 'no-face'}
 
                 rect = rects[0]
                 shape = self.dlib_featurepts_predictor(input_img, rect)
@@ -138,7 +138,7 @@ class MeshesDeep3DFaceGetMesh(Resource):
         # flip ys
         # save_vertices[:, 1] = h - 1 - save_vertices[:, 1]
         # canonical_vertices[:, 1] = h - 1 - canonical_vertices[:, 1]
-        # save_kpt[:, 1] = h - 1 - save_kpt[:, 1]
+        landmarks_2d[:, 1] = h - 1 - landmarks_2d[:, 1]
         # # pos[:, :, 1] = h - 1 - pos[:, :, 1]
 
         # zero based indexing
