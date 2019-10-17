@@ -53,9 +53,22 @@ pip install imutils
 pip install opencv-python
 ```
 
-## Run
+## Build Docker Image
+
+```bash
+cd docker
+docker build -t quantumcraft/deep3dface --no-cache .
+```
+
+## Run Docker Container
+
+```bash
+port=5000
+docker run --gpus all -p $port:$port -e ip=0.0.0.0 -e port=$port -d quantumcraft/deep3dface
+```
+
+## Run Locally
 
 ```bash
 uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
 ```
-
