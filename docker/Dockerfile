@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:1.14.0-gpu-py3
 
 LABEL maintainer "hallo.quantum@gmail.com"
 
@@ -19,12 +19,14 @@ RUN git clone --recursive https://github.com/quantum-craft/AIFaceDeep3DServer.gi
 RUN pip install --upgrade pip
 RUN pip install cmake
 RUN pip install dlib
-RUN pip install numpy \
+RUN pip install wheel \
+numpy \
 Pillow \
 scikit-image \
 scipy \
 imutils \
 opencv-python \
+uwsgi \
 flask-restful
 
 RUN cp /home/ubuntu/FaceReconModel.pb /AIFaceDeep3DServer/algorithms/Deep3DFaceReconstruction/network/
@@ -36,5 +38,5 @@ WORKDIR /AIFaceDeep3DServer
 ENV ip 0.0.0.0
 ENV port 5000
 
-CMD ["sh", "-c", "python app.py --ip ${ip} --port ${port}"]
+CMD ["sh", "-c", "uwsgi --socket ${ip}:${port} --protocol=http -w wsgi:app"]
 
