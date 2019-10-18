@@ -38,7 +38,7 @@ pip install flask-restful
 - For more information, see <https://github.com/microsoft/Deep3DFaceReconstruction>
 
 ```bash
-pip install tensorflow-gpu
+pip install tensorflow-gpu==1.14
 ```
 
 ### Install Python Libraries

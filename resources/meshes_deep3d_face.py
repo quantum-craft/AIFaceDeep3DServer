@@ -161,7 +161,7 @@ class MeshesDeep3DFaceGetMesh(Resource):
 
         return ret_json_obj.json, 200
 
-    def load_img(img_path, lm_path):
+    def load_img(self, img_path, lm_path):
         image = Image.open(img_path)
         lm = np.loadtxt(lm_path)
         return image, lm
