@@ -11,12 +11,6 @@ Deep 3D Face Reconstruction Server for AI face morphing project
 - (Highly Recommended) CUDA capable GPU
 - (Highly Recommended) CUDA toolkits 10.0
 
-**Mathematically**:
-
-For one example $x^{(i)}$:
-$$z^{[1] (i)} =  W^{[1]} x^{(i)} + b^{[1]}\tag{1}$$ 
-
-
 ## Installation
 
 - It is recommended to use Conda(Anaconda) to control Python environment.
